@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             x:Class="AgeCalc.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            
+            <Label
+                Text="Can you legally drink alcohol?"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            
+            <Editor x:Name="Input" Placeholder="Enter your age"></Editor>
+            <DatePicker x:Name="DatePickerInput" MinimumDate="01/01/1900"
+                        MaximumDate="12/31/2024" />
+
+            <Button
+                x:Name="InputBtn"
+                Text="Calculate by Input" 
+                Clicked="Button_Clicked"
+                HorizontalOptions="Fill" />
+            
+            <Button
+                x:Name="DateBtn"
+                Text="Calculate by Date" 
+                Clicked="Date_Button_Clicked"
+                HorizontalOptions="Fill" />
+            
+            <Label x:Name="Years" Text=" " HorizontalTextAlignment="Center" TextColor="Green" FontSize="36"></Label>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
